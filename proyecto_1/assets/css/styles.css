@@ -1,0 +1,396 @@
+/**
+    fuentes
+*/
+
+@font-face {
+    font-family: "delicious";
+    src: url("./../fonts/DeliciousHandrawn-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("./../fonts/NunitoSans-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "prompt";
+    src: url("./../fonts/Prompt-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icons";
+    src: url("./../fonts/WebSymbols-Regular.otf") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*** estilos generales**/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: ghostwhite;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid gray;
+    padding: 2px;
+    background-color: white;
+    padding-top: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1px solid rgb(134, 48, 48);
+    color: black;
+}
+
+input[type="submit"],
+input[type="button"]{
+    display: block;
+    padding: 8px;
+    background-color: rgb(146, 35, 35);
+    color: white;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Nunito';
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover{
+   box-shadow: 0px 0px 2px gray;
+}
+
+input[type="submit"]:active,
+input[type="button"]:active{
+   box-shadow: 0px 0px 3px gray inset;
+
+}
+
+a{
+    color: rgb(78, 15, 15);
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: rgb(32, 9, 9);
+    text-decoration: none;
+    
+}
+
+.red {
+    color: rgb(128, 9, 9);
+}
+
+#header {
+    min-width: 1024px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+}
+
+#header a {
+    text-decoration: none;
+    color: black;
+}
+
+#header #logotipo {
+    width: 770px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#header #logotipo img {
+    display: block;
+    text-align: center;
+    width: 20%;
+    margin: 0px auto;
+}
+
+#header h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(172, 15, 15);
+    margin-top: 10px;
+    font-family: "delicious";
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    text-shadow: 0px 2px 1px #ccc;
+    transition: all 300ms;
+
+}
+
+#header h1:hover {
+    text-shadow: 0px 2px 1px #888585;
+}
+
+/* Barra de navegacion */
+
+#nav {
+    width: 100%;
+    background-color: rgb(138, 22, 22);
+    color: white;
+    height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px #ccc;
+}
+
+#nav ul {
+
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1130px;
+}
+
+#nav>ul>li {
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid ghostwhite;
+    transition: all 300ms;
+}
+
+#nav>ul>li>a {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#nav>ul>li>a:first-child {
+    border-left: 1px solid ghostwhite;
+}
+
+#nav>ul>li:hover {
+    background-color: rgb(177, 62, 62);
+    box-shadow: 0px 0px 4px #ccc inset;
+}
+
+/** desplegables del menu header*/
+
+#nav>ul>li>ul {
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px #ccc;
+    z-index: 1;
+}
+
+#nav>ul>li:hover>ul {
+    display: block;
+}
+
+#nav>ul>li:hover>ul>li {
+    background-color: rgb(218, 149, 149);
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+#nav>ul>li:hover>ul>li>a {
+   color: white;
+   text-decoration: none;
+    
+}
+
+#nav>ul>li:hover>ul>li:hover {
+   box-shadow: 0xp 0px 6px #ccc inset;
+
+}
+
+/******************* CONTENIDO CENTRAL ******************************/
+
+#content {
+    width: 1250px;
+    min-height: 1100px;
+    margin: 0px auto;
+}
+
+/***BARRA LATERAL **/
+
+#aside {
+    width: 16%;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: "Nunito";
+}
+
+#aside .widget {
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #888585;
+}
+
+#aside .widget:last-child{
+    margin-bottom: 20px;
+}
+
+#aside h3 {
+    display: block;
+    color:  black;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+    margin-bottom: 15px;
+}
+
+#aside li {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: none;
+}
+
+/***** formularios barra lateral *****/
+
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a {
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 4px;
+    border-radius: 6px;
+    margin-block-end: 3px;
+}
+
+#aside div input[type="button"],
+#aside div input[type="submit"] 
+#aside div button{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#aside input, 
+#aside label {
+    margin: 0px auto;
+    margin-block-start: 19px;
+    margin-block-end: 19px;
+}
+
+/************* SECCIONES *******************************/
+
+#sections {
+    float: right;
+    width: 75%;
+    margin-right: 20px;
+    font-family: "Nunito";
+}
+
+#sections .titulo {
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-family: "prompt";
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+#sections section {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333;
+    font-size: 17px;
+    font-family: "Nunito";
+}
+
+#sections article {
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sections span {
+    font-size: 13px;
+    color: gray;
+    text-transform: math-auto;
+    font-style: italic;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.icon {
+    font-family: "icons";
+}
+
+/*************** FOOTER ********************************/
+
+#footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    margin: 0px auto;
+    margin-top: 40px;
+    font-family: "Nunito";
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*********************** MEDIAS *************************************/
+
+@media ( max-width: 888px){
+    .section {
+        width: 30%;
+        background-color: ghostwhite;
+        float: left;
+    }
+}
+
+@media (max-width: 632px) {
+    .section {
+        width: 90%;
+        background-color: #888585;
+
+    }
+}
