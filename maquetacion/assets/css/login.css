@@ -1,0 +1,134 @@
+/**************FUENTES ******************/
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./../fonts/Roboto-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gamer";
+    src: url("./../fonts/PressStart2P-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    background: ghostwhite;
+}
+
+.box-login {
+    padding: 0%;
+    width: 50%;
+    float: left;
+    margin: 0px auto;
+}
+
+.login {
+    padding: 7%;
+    width: 47%;
+    background: white;
+    height: 274px;
+    margin: 6% 29% auto;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    box-shadow: 4px 4px 9px #ccc;
+}
+
+.box-form {
+    padding: 0%;
+    display: grid;
+    line-height: 43px;
+    font-family: "Roboto";
+}
+
+.form-control-input {
+    padding: 2%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+
+.btn_login {
+    padding: 3%;
+    width: 46%;
+    margin: 22px auto;
+    border-radius: 42px;
+    border: 1px solid #16A085;
+    line-height: 17px;
+    padding-top: 11px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 17px;
+    background-color: #16A085;
+    color: white;
+}
+
+.box-urls {
+    padding: 1%;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    font-family: "Roboto";
+    color: gray;
+}
+
+.box-img-banner {
+    padding: 0%;
+    width: 50%;
+    overflow: hidden;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.img_banner {
+    padding: 0%;
+    width: 697px;
+    height: auto;
+}
+
+.box-urls a {
+    text-decoration: none;
+    color: darkgreen;
+    font-size: 17px;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.box-logo-site {
+    width: 100%;
+    margin: 65px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-start: 60px;
+}
+.logo-site {
+    width: 12%;
+    margin-inline-end: 18px;
+}
+.label-site {
+    font-family: "Gamer";
+    font-size: 20px;
+    color: darkviolet;
+    margin-block-start: 6px;
+}
+
+.label-site label {
+    font-family: 'Roboto';
+    color: black;
+    letter-spacing: 1px;
+}
