@@ -18,11 +18,19 @@
     font-family: "WebSymbolsRegular";
     src: url("./../fonts/websymbols-regular-webfont.eot");
     src: url("./../fonts/websymbols-regular-webfont.eot#iefix") format('embedded-opentype'),
-    url('./../fonts/websymbols-regular-webfont.woff') format('woff'),
-    url('./../fonts/websymbols-regular-webfont.ttf') format('truetype'),
-    url('./../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+        url('./../fonts/websymbols-regular-webfont.woff') format('woff'),
+        url('./../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('./../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "pokemon";
+    src: url("./../fonts/Pokemon\ Solid.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    text-shadow: yellow;
 }
 
 /**********GENERALES************/
@@ -36,7 +44,7 @@ body {
     background-image: url('./../imgs/pattern.png');
 }
 
-.wrap{
+.wrap {
     margin: 0px auto;
     width: 1200px;
 }
@@ -44,7 +52,7 @@ body {
 
 /**********CABECERA**********/
 
-#header{
+#header {
     width: 100%;
     height: 70px;
     background-color: black;
@@ -67,13 +75,52 @@ body {
 
 }
 
+#logo:hover {
+    background-color: #00538C;
+    border-radius: 2px;
+    color: white;
+}
+
 #logo .gear {
     display: block;
     float: left;
     font-size: 30px;
     margin-top: 8px;
     margin-left: 26px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes rotate-gear {
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#logo:hover .gear {
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow{
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
 
 #logo h3 {
     display: block;
@@ -84,12 +131,30 @@ body {
     transition: all 300ms;
 }
 
+#logo:hover h3 {
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight{
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
 .icon {
     font-family: "WebSymbolsRegular";
 }
 
-.gear{
+.gear {
     font-family: "WebSymbolsRegular";
+}
+
+.clearfix {
+    float: none;
+    clear: both;
 }
 
 /***********MENU ********************/
@@ -108,7 +173,7 @@ body {
     line-height: 75px;
 }
 
-#menu>ul>li>a{
+#menu>ul>li>a {
     display: block;
     color: white;
     text-decoration: none;
@@ -130,18 +195,53 @@ body {
     background-image: url('./../imgs/bakbaner.png');
     background-position: -200px -200px;
     margin: 20px auto;
+    overflow: hidden;
+    animation: backBanner 10s linear;
+}
+
+@keyframes backBanner {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: -200px -200px;
+    }
 }
 
 #banner h1 {
-    color: white;
     display: block;
     width: 850px;
     font-family: "BebasNeue";
+    color: white;
     font-size: 45px;
     letter-spacing: 2px;
     margin: 27px auto;
     font-weight: normal;
     text-shadow: 2px 2px 1px black;
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;       
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;   
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;   
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;     
+    }
 }
 
 /********TARJETAS***************/
@@ -156,8 +256,13 @@ body {
     margin-top: 40px;
     background-color: white;
     cursor: pointer;
-
+    transition: all 300ms;
 }
+
+.card:hover {
+    background-color: black;
+}
+
 
 .card .icon {
     display: block;
@@ -167,10 +272,25 @@ body {
     line-height: 130px;
     text-align: center;
     margin: 0px auto;
-
+    transition: all 300ms;
 }
 
-.card .category{
+.card:hover .icon {
+    font-size: 70px;
+    color: #37BCF9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon {
+    from {
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.card .category {
     width: 100%;
     height: 50px;
     font-family: "TrebuchetMS";
@@ -178,6 +298,24 @@ body {
     font-weight: bold;
     text-align: center;
     color: #00538C;
+    transition: all 300ms;
+}
+
+.card:hover .category {
+    color: white;
+    animation: showCategory 400ms linear;
+    margin-block-start: 15px;
+}
+
+@keyframes showCategory{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to {
+        transform: translateY(0%);
+        color: white;
+    }
 }
 
 .card .description {
@@ -185,6 +323,23 @@ body {
     text-align: center;
     font-family: "TrebuchetMS";
     font-size: 15px;
+    transition: all 300ms;
+}
+
+.card:hover .description {
+    color: white;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription {
+    from {
+        transform: translateX(-300%);
+        color: black;
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
 /*******LATERAL*********/
@@ -229,7 +384,7 @@ aside h3:first-child {
     box-shadow: 1px 1px 4px #ccc inset;
 }
 
-#lateral input[type="text"]{
+#lateral input[type="text"] {
     width: 85%;
     height: 30px;
     border: none;
@@ -240,7 +395,7 @@ aside h3:first-child {
     transition: all 300ms;
 }
 
-#lateral input[type="text"]:focus{
+#lateral input[type="text"]:focus {
     color: black;
 }
 
@@ -265,10 +420,10 @@ aside h3:first-child {
     margin-top: 20px;
     padding-top: 2px;
     background-color: white;
-    box-shadow: 0px 0px 1px rgba(0, 0 , 0, 0.3), 0px 3px 7px rgba(0, 0 , 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0 , 0, 0.3) inset;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
 }
 
-#login input[type="email"], 
+#login input[type="email"],
 input[type="password"] {
     display: block;
     margin: 0px auto;
@@ -281,13 +436,14 @@ input[type="password"] {
     padding-left: 30px;
 }
 
-#login input[type="email"]:focus, 
+#login input[type="email"]:focus,
 #login input[type="password"]:focus {
     color: black;
     box-shadow: 1px 1px 1px gray;
 }
 
-#login #user, #login #pass {
+#login #user,
+#login #pass {
     text-align: center;
     display: block;
     position: absolute;
@@ -302,7 +458,7 @@ input[type="password"] {
     font-size: 20px;
 }
 
-#login input[type="button"], 
+#login input[type="button"],
 #login input[type="submit"],
 #login input[type="reset"],
 #login button {
@@ -321,14 +477,14 @@ input[type="password"] {
     border-radius: 29px;
 }
 
-#login input[type="button"]:hover, 
+#login input[type="button"]:hover,
 #login input[type="submit"]:hover,
 #login input[type="reset"]:hover,
 #login button:hover {
     box-shadow: 0px 0px 3px gray;
 }
 
-#login input[type="button"]:last-child, 
+#login input[type="button"]:last-child,
 #login input[type="submit"]:last-child,
 #login input[type="reset"]:last-child,
 #login button:last-child {
@@ -349,7 +505,7 @@ input[type="password"] {
     color: #00538C;
 }
 
-#login > form > a:nth-child(7){
+#login>form>a:nth-child(7) {
     margin-top: 20px;
 }
 
@@ -357,7 +513,7 @@ input[type="password"] {
     height: 185px;
 }
 
-#social a{
+#social a {
     display: block;
     color: black;
     text-decoration: none;
@@ -365,6 +521,34 @@ input[type="password"] {
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#social .overlay {
+    display: block;
+    height: 20px;
+    font-family: "TrebuchetMS";
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background-color: #F4F7FE;
+    position: absolute;
+    padding: 5px;
+    margin-left: 82px;
+    margin-top: -50px;
+    width: 11%;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#social div:hover .overlay {
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 /*******FOOTER*******************/
@@ -378,7 +562,7 @@ input[type="password"] {
     overflow: hidden;
 }
 
-#footer .wrap > div {
+#footer .wrap>div {
     float: left;
     width: 320px;
     height: 370px;
@@ -417,7 +601,7 @@ footer a {
 #footer ul li {
     margin-top: 10px;
     padding: 5px;
-    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
 }
 
 #footer ul li a {
@@ -440,4 +624,142 @@ footer a {
 
 #footer #browsers img {
     width: 45px;
+}
+
+/****************ARTICULOS**************************/
+
+#articles {
+    width: 850px;
+    float: left;
+}
+
+#articles .title_pokemon {
+    display: flex;
+    width: 95%;
+    height: 128px;
+    line-height: 75px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    background-color: rgb(184, 34, 34);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    margin: 0px auto;
+    margin-block-end: 60px;
+    margin-block-start: 25px;
+    box-shadow: 4px 4px 7px black;
+    border-bottom: 1px solid black;
+}
+
+#articles .title_pokemon .label-title-articles {
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#articles .title_pokemon:hover .label-title-articles {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.card_pokemon {
+    float: left;
+    width: 41%;
+    border: 1px solid ghostwhite;
+    margin-inline-end: 26px;
+    margin-inline-start: 40px;
+    text-align: center;
+    margin-block-end: 54px;
+    margin-block-start: 44px;
+    height: 139px;
+    border-radius: 13px;
+    box-shadow: 0px 1px 9px #ccc;
+    background: rgb(184, 34, 34);
+    transition: all 300ms;
+}
+
+.card_pokemon:hover {
+    background-color: rgb(212, 64, 64);
+}
+
+.titulo_pokemon {
+    font-size: 32px;
+    font-family: "pokemon";
+    letter-spacing: 4px;
+    color: yellow;
+    line-height: 36px;
+    -webkit-text-stroke: 1px darkblue;
+}
+
+.card_pokemon:hover .encabezado_pokemon h3 {
+    animation: showTitlePokemon 400ms linear;
+}
+
+@keyframes showTitlePokemon {
+    from {
+        transform: translateY(300%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.encabezado_pokemon {
+    position: relative;
+    top: -81px;
+    left: -1px;
+}
+
+.body_card_pokemon {
+
+}
+
+.img_pokemon {
+    padding: 0%;
+    width: 46%;
+    position: relative;
+    margin-block-end: -4px;
+    transition: all 300ms;
+}
+
+.card_pokemon:hover .encabezado_pokemon img {
+    animation: showImgPokemon 200ms linear;
+}
+
+@keyframes showImgPokemon {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 46%;
+    }
+}
+
+.detail-pokemon {}
+
+.img-logo-api {}
+
+.pagination {
+    width: 45%;
+    margin: 10px auto;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_pagination {
+    padding: 15px;
+    margin-inline-end: 14px;
+    margin-inline-start: 10px;
+    margin-block-end: 28px;
+    border-radius: 36px;
+    width: 42%;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
 }

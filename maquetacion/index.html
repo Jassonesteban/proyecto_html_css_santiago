@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="icon" type="favicon/x-icon" href="./assets/imgs/programador.png" />
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/funciones_pokemon.js"></script>
     <title>Maquetacion Responsive</title>
 </head>
 
@@ -69,6 +71,7 @@
             </div>
         </section>
         <!--BARRA LATERAL-->
+        <div class="clearfix"></div>
         <aside id="lateral">
             <h3>Buscar</h3>
             <div id="search">
@@ -102,12 +105,15 @@
             <div id="social" class="aside-box">
                 <div id="facebook">
                     <a href="#" class="icon">f</a>
+                    <p class="overlay">Facebook</p>
                 </div>
                 <div id="twitter">
                     <a href="#" class="icon">t</a>
+                    <p class="overlay">Twitter</p>
                 </div>
                 <div class="github">
                     <a href="#" class="icon">i</a>
+                    <p class="overlay">Github</p>
                 </div>
                 <div class="instagram">
 
@@ -123,7 +129,13 @@
 
         <!---ARTICULOS--->
         <section id="articles">
-            <h3>Pokemon.api</h3>
+            <h3 class="title_pokemon"><img src="./assets/imgs/pokeapi_256.png" class="img-logo-api" /><label class="label-title-articles">| Versión Jasson.io</label></h3>
+            <div class="clearfix"></div>
+            <div class="detail-pokemon" id="pokemon_detail"></div>
+            <div class="pagination">
+                <button type="button" class="btn_pagination" onclick="previousPage();">Anterior</button>
+                <button type="button" class="btn_pagination" onclick="nextPage();">Siguiente</button>
+            </div>
         </section>
     </section>
 
