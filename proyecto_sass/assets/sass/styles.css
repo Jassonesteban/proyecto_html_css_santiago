@@ -1,0 +1,89 @@
+.menu ul {
+  background-color: azure;
+}
+.menu ul li {
+  font-size: 20px;
+}
+.menu ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: cadetblue;
+  color: beige;
+}
+.footer p {
+  font-size: 20px;
+  color: black;
+}
+.footer label {
+  color: aquamarine;
+}
+
+body {
+  background-color: red;
+  color: white;
+  font-family: sans-serif, Helvetica, Arial;
+  font-size: 100%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.caja {
+  padding: 10px;
+  background-color: whitesmoke;
+  color: black;
+}
+.caja h1 {
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+}
+.caja p {
+  font-size: 20px;
+  color: red;
+}
+.caja .info {
+  text-decoration: line-through;
+  border-bottom: 1px solid black;
+}
+.caja .info p {
+  color: black;
+  font-size: 30px;
+}
+
+/*******MIXINS****************/
+.caja {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.listado {
+  border: 1px solid green;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px green;
+}
+
+/***************HERENCIA ****************/
+.alert {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/****OPERADORES********/
+h2 {
+  font-size: 25px;
+}
+
+.caja {
+  width: 384%;
+}
+
+body {
+  color: black;
+}
+
+/*# sourceMappingURL=styles.css.map */

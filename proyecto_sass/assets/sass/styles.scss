@@ -1,0 +1,95 @@
+@use 'header';
+@use 'footer';
+
+
+$fuente-texto: sans-serif, Helvetica, Arial;
+$color-fondo: red;
+$font-size: 100%;
+$color-text: white;
+$grosor-fuente: bold;
+$decoracion-texto: underline;
+
+body {
+    background-color: $color-fondo;
+    color: $color-text;
+    font-family: $fuente-texto;
+    font-size: $font-size;
+    font-weight: $grosor-fuente;
+    text-decoration: $decoracion-texto;
+}
+
+.caja {
+    padding: 10px;
+    background-color: whitesmoke;
+    color: black;
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        color: black;
+    }
+
+    p {
+        font-size: 20px;
+        color: red;
+    }
+
+    .info {
+        text-decoration: line-through;
+        border-bottom: 1px solid black;
+
+        p {
+            color: black;
+            font-size: 30px;
+        }
+    }
+}
+
+/*******MIXINS****************/
+
+@mixin crearBordes($color, $size, $shadow) {
+    border: 1px solid $color;
+    border-radius: $size;
+    box-shadow: 0px 0px 5px $shadow;
+}
+
+.caja {
+    @include crearBordes(black, 10px, black);
+}
+
+.listado {
+    @include crearBordes(green, 10px, green);
+}
+
+/***************HERENCIA ****************/
+
+%alert-precaucion {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.alert {
+    @extend %alert-precaucion;
+}
+
+/****OPERADORES********/
+
+h2 {
+    font-size: 20px + 5px;
+}
+
+.caja {
+    width: 1920px / 500px * 100%;
+}
+
+// codicionales, bucles
+body {
+    @if $color-fondo ==red {
+        color: black;
+    }
+    @else {
+        color: aqua;
+    }
+}

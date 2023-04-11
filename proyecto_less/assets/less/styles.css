@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial;
+}
+.informacion ul {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.informacion ul li {
+  color: white;
+}
+.informacion ul li a {
+  text-decoration: none;
+  color: blanchedalmond;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquina dispensadora</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="box-mecato" id="boxMecato">
+        </div>
+
+        <div class="box-maquina">
+            <h2>Maquina dispensadora JSON.io</h2>
+
+            <p class="pantalla" id="textoPantalla"></p>
+    
+            <div class="teclado">
+                <button type="button" onclick="numero('1');" value="1" class="btn-teclado">1</button>
+                <button type="button" onclick="numero('2');" value="2" class="btn-teclado">2</button>
+                <button type="button" onclick="numero('3');" value="3" class="btn-teclado">3</button>
+                <button type="button" onclick="numero('4');" value="4" class="btn-teclado">4</button>
+                <button type="button" onclick="numero('5');" value="5" class="btn-teclado">5</button>
+                <button type="button" onclick="numero('6');" value="6" class="btn-teclado">6</button>
+                <button type="button" onclick="numero('7');" value="7" class="btn-teclado">7</button>
+                <button type="button" onclick="numero('8');" value="8" class="btn-teclado">8</button>
+                <button type="button" onclick="numero('9');" value="9" class="btn-teclado">9</button>
+                <button type="button" onclick="numero('0');" value="0" class="btn-teclado">0</button>
+                <button type="button" onclick="borradoParcial();" value="BORRAR" class="btn-teclado">Borrar</button>
+                <button class="btn-teclado" onclick="comprar();">COMPRAR</button>
+            </div>
+
+            <div id="boxRecibo">
+            </div>
+        </div>  
+        <input type="hidden" value="" id="precio_producto_elegido" />
+        <input type="hidden" value="" id="valor_dinero_ingresado" />
+    </div>
+    <script src="./assets/js/logica.js"></script>
+</body>
+</html>

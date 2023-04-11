@@ -1,0 +1,276 @@
+/*****FUENTES******/
+
+@font-face {
+    font-family: "Maquina";
+    src: url("./../fonts/DS-DIGIT.TTF") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tecnologia";
+    src: url("./../fonts/Technology.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./../fonts/Roboto-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*******ESTILOS DE LA MAQUINA *************/
+
+.container {
+    padding: 1%;
+    border: 1px solid black;
+    height: 868px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    width: 97%;
+}
+
+.box-mecato {
+    padding: 0%;
+    width: 70%;
+    background-color: rgb(22, 20, 20);
+    border: 1px solid black;
+    height: 871px;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow-y: scroll;
+}
+
+.box-maquina {
+    padding: 0%;
+    width: 29%;
+    background: gray;
+    border: 1px solid gray;
+    height: 871px;
+    float: right;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/******* ESTILO DEL MECATO *****************/
+
+.box_producto {
+    padding: 0%;
+    float: left;
+    width: 20%;
+    height: 209px;
+    margin-block-end: 52px;
+    margin-block-start: 17px;
+    margin-inline-start: 54px;
+    display: grid;
+    cursor: pointer;
+}
+
+.img_mecato {
+    padding: 0%;
+    width: 100%;
+    height: 212px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.codigo_producto {
+    color: black;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.precio_producto {
+    padding: 0%;
+    font-size: 22px;
+    font-family: "Tecnologia";
+    font-weight: 600;
+}
+
+.cantidad_producto {
+    font-size: 16px;
+    color: gray;
+}
+
+.se_acabo {
+    padding: 0%;
+    color: red;
+    background: red;
+    border-radius: 50%;
+    height: 22px;
+    width: 10%;
+    font-size: 0px;
+    margin-inline-start: 2px;
+}
+
+.no_se_acabo {
+    padding: 0%;
+    color: green;
+    background: green;
+    border-radius: 50%;
+    height: 22px;
+    width: 10%;
+    font-size: 0px;
+    margin-inline-start: 2px;
+}
+
+.info_producto {
+    background: ghostwhite;
+    margin-block-start: 10px;
+    display: flex;
+    color: black;
+    width: 96%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 6px;
+    border-radius: 1px;
+    font-family: "Roboto";
+}
+
+/******ESTILO DEL TABLERO ELECTRONICO *****************/
+
+.box-in-money {
+    width: 100%;
+    text-align: center;
+    margin-block-end: 25px;
+}
+
+.form-money {
+    padding: 1%;
+    font-family: "Roboto";
+    width: 57%;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-block-start: 11px;
+    height: 18px;
+}
+
+.btn-send-money {
+    width: 21%;
+    padding: 1%;
+    float: revert;
+    font-size: 16px;
+    margin: 0px auto;
+    border-radius: 3px;
+    border: none;
+    height: 29px;
+    background-color: aquamarine;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.box-maquina h2 {
+    color: white;
+    font-family: "Roboto";
+    letter-spacing: 1px;
+    text-align: center;
+    margin-block-start: 19px;
+    margin-block-end: 13px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    width: 87%;
+    margin-inline-start: 38px;
+    padding-bottom: 14px;
+}
+
+.pantalla {
+    padding: 15px;
+    width: 91%;
+    height: 33px;
+    background: deepskyblue;
+    margin: 0px auto;
+    font-family: "Maquina";
+    color: black;
+    margin-block-end: 25px;
+    border: none;
+    border-radius: 1px;
+    box-shadow: 4px 3px 3px -1px black inset;
+    font-size: 43px;
+}
+
+.pantalla label {
+    padding: 0%;
+}
+
+.teclado {
+    padding: 0%;
+    width: 100%;
+    text-align: center;
+    margin-block-start: 47px;
+}
+
+.teclado button {
+    padding: 15px;
+    width: 24%;
+    margin-block-end: 10px;
+    margin-block-start: 9px;
+    border-radius: 7px;
+    margin-inline-end: 10px;
+    float: none;
+    font-size: 22px;
+    background-color: white;
+    cursor: pointer;
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.btn-comprar {
+    padding: 9px;
+    width: 89%;
+    margin: 0px auto;
+    margin-inline-start: 34px;
+    text-align: center;
+    border-radius: 9px;
+    border: none;
+    background-color: aquamarine;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+#boxRecibo {
+    background: white;
+    width: 68%;
+    height: 160px;
+    margin: 0px auto;
+    overflow-y: scroll;
+    margin-block-start: 21px;
+    border-radius: 12px;
+    font-family: monospace;
+    padding-inline-start: 17px;
+    padding-top: 18px;
+    display: grid;
+}
+
+#boxRecibo label {
+    font-size: 16px;
+    color: gray;
+    margin-inline-end: 18px;
+    border-right: 1px solid;
+    padding-inline-end: 18px;
+    padding-bottom: 8px;
+}
+
+.info_producto:active{
+    background-color: bisque;
+}
+
+.btn-teclado:nth-last-child(){
+    background-color: aquamarine;
+}
+
+.nombre_producto {
+    font-size: 10px;
+}
